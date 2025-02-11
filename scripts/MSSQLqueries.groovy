@@ -5,13 +5,13 @@
 import de.hybris.platform.core.Registry;
 conn = Registry.getCurrentTenant().getDataSource().getConnection();
 stmt = conn.createStatement();
-stmt.executeUpdate("ALTER TABLE tablename ALTER COLUMN p_columnname varchar(1000)")
+stmt.executeUpdate("ALTER TABLE [tablename] ALTER COLUMN [p_columnname] varchar(1000)")
 
 // drop column
 import de.hybris.platform.core.Registry;
 conn = Registry.getCurrentTenant().getDataSource().getConnection();
 stmt = conn.createStatement();
-stmt.executeUpdate("ALTER TABLE tablename DROP COLUMN p_columnname")
+stmt.executeUpdate("ALTER TABLE [tablename] DROP COLUMN [p_columnname]")
 
 // create a new index
 

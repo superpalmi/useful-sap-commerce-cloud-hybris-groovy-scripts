@@ -1,3 +1,7 @@
+/**
+ * This script is used to test the connection to an SFTP server.
+ */
+
 import org.springframework.integration.sftp.session.DefaultSftpSessionFactory
 
 def session_factory = new DefaultSftpSessionFactory()

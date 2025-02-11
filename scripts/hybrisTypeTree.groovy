@@ -1,3 +1,10 @@
+/**
+ *
+ * This script is used to generate a tree of all the types in the system
+ *
+ *
+ *
+ */
 import java.util.*;
 flexibleSearch = spring.getBean("flexibleSearchService")
 result = flexibleSearch.search (/select {pk} from {ComposedType}/).getResult()

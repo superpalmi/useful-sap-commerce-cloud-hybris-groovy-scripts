@@ -1,6 +1,6 @@
 /**
  *
- * Clear all cache regions in the cache, modify this script to clear specific cache regions, schedule it as a cronjob if needed
+ * Clears all cache regions in the cache, modify this script to clear specific cache regions, schedule it as a cronjob if needed
  */
 import de.hybris.platform.regioncache.region.*
 

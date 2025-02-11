@@ -1,3 +1,7 @@
+/**
+ * This script is used to restart a business process for a given process definition name from a given step.
+ */
+
 import de.hybris.platform.processengine.model.BusinessProcessModel
 import de.hybris.platform.servicelayer.search.FlexibleSearchQuery
 import org.slf4j.LoggerFactory

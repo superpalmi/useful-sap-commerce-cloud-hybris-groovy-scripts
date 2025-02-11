@@ -1,6 +1,9 @@
 # useful-sap-commerce-cloud-hybris-groovy-scripts
 Useful Groovy Scripts for SAP Commerce Cloud (hybris) implementation
 
+# How to use Groovy Scripts in SAP Commerce Cloud (hybris)
+Open any script contained inside /scripts folder and execute it inside the HAC (Hybris Administration Console) Groovy Script Console
+
 NOTE: please test before use in production environment, use Rollback Mode: rollback, use them at your own risk
 
 
@@ -13,3 +16,4 @@ NOTE: please test before use in production environment, use Rollback Mode: rollb
 - https://sivakumar-hybris-dev.medium.com/clear-cache-through-groovy-c69bb91a5c23
 - https://me.sap.com/
 - https://help.sap.com/docs/SAP_COMMERCE_CLOUD_PUBLIC_CLOUD
+- https://github.com/rrhuffy/hybristools
