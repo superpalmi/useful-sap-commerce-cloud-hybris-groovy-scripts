@@ -72,7 +72,22 @@ Double getDbUtilization() {
     return avg;
 }
 
+void findAndPauseCronJobs() {
+    List<CronJobModel> cronJobs = cronjobService.getRunningOrRestartedCronJobs();
 
+    for (CronJobModel cronJob : cronJobs) {
+        LOG.info(cronJob.getCode());
+        println(cronJob.getCode());
+
+        cronJob.setStatus(CronJobStatus.PAUSED);
+        cronJob.setActive(false);
+        cronJob.setResult(CronJobResult.SUCCESS);
+        modelService.save(cronJob);
+        LOG.info("cron job " + cronJob.getCode() + " paused ");
+        println("cron job " + cronJob.getCode() + " paused ");
+
+    }
+}
 
 Double getIoUtilization() {
     Date startDate = new Date();
@@ -111,8 +126,6 @@ Double getIoUtilization() {
 }
 
 
-
-
 Double dbUtilization = getDbUtilization();
 
 LOG.info("dbUtilization " + dbUtilization);
@@ -122,23 +135,7 @@ if (dbUtilization > 80) {
     println("DB Utilization is more than 80%");
 
     //UNCOMMENT THIS IF YOU NEED TO STOP JOBS IF DB UTILIZATION IS MORE THAN 80%
-   /* List<CronJobModel> cronJobs = cronjobService.getRunningOrRestartedCronJobs();
-
-
-
-
-    for (CronJobModel cronJob : cronJobs) {
-        LOG.info(cronJob.getCode());
-        println(cronJob.getCode());
-
-        cronJob.setStatus(CronJobStatus.PAUSED);
-        cronJob.setActive(false);
-        cronJob.setResult(CronJobResult.SUCCESS);
-        modelService.save(cronJob);
-        LOG.info("cron job " + cronJob.getCode() + " paused ");
-        println("cron job " + cronJob.getCode() + " paused ");
-
-    }*/
+    //findAndPauseCronJobs()
 
 
 }
@@ -146,49 +143,11 @@ if (dbUtilization > 80) {
 Double ioUtilization = getIoUtilization();
 LOG.info("ioUtilization " + ioUtilization);
 
-if(ioUtilization>80)
-{
+if (ioUtilization > 80) {
 
     LOG.info("DB Utilization is more than 80%");
     println("DB Utilization is more than 80%");
-   /* List<CronJobModel> cronJobs = cronjobService.getRunningOrRestartedCronJobs();
-
-
-
-
-    for (CronJobModel cronJob : cronJobs) {
-        LOG.info(cronJob.getCode());
-        println(cronJob.getCode());
-
-        cronJob.setStatus(CronJobStatus.PAUSED);
-        cronJob.setActive(false);
-        cronJob.setResult(CronJobResult.SUCCESS);
-        modelService.save(cronJob);
-        LOG.info("cron job " + cronJob.getCode() + " paused ");
-        println("cron job " + cronJob.getCode() + " paused ");
-
-    }*/
+    //UNCOMMENT THIS IF YOU NEED TO STOP JOBS IF DB UTILIZATION IS MORE THAN 80%
+    //findAndPauseCronJobs()
 
 }
-
-
-/*
-LOG.info("DB Utilization is more than 80%");
-println("DB Utilization is more than 80%");
-List<CronJobModel> cronJobs = cronjobService.getRunningOrRestartedCronJobs();
-
-
-
-
-for (CronJobModel cronJob : cronJobs) {
-    LOG.info(cronJob.getCode());
-    println(cronJob.getCode());
-
-    cronJob.setStatus(CronJobStatus.PAUSED);
-    cronJob.setActive(false);
-    cronJob.setResult(CronJobResult.SUCCESS);
-    modelService.save(cronJob);
-    LOG.info("cron job " + cronJob.getCode() + " paused ");
-    println("cron job " + cronJob.getCode() + " paused ");
-
-}*/
