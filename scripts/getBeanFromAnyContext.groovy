@@ -1,6 +1,4 @@
-import de.hybris.platform.core.PK
 import de.hybris.platform.spring.HybrisContextLoaderListener
-import org.apache.commons.lang3.reflect.FieldUtils
 import org.springframework.web.context.ContextLoader
 import org.springframework.web.context.WebApplicationContext
 

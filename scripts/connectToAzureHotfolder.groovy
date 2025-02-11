@@ -3,10 +3,8 @@
  * NOTE: azure hotfolders extensions are needed, please see the SAP Documentation for more information
  *
  */
+
 import com.azure.storage.blob.*
-import java.nio.file.*
-
-
 
 def connectionString = "your-connection-string"
 def containerName = "your-container-name" // usually it's called "hybris"

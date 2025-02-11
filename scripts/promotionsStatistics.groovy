@@ -1,7 +1,6 @@
-import de.hybris.platform.util.Config;
-
-import de.hybris.platform.servicelayer.search.FlexibleSearchQuery;
-import de.hybris.platform.servicelayer.search.SearchResult;
+import de.hybris.platform.servicelayer.search.FlexibleSearchQuery
+import de.hybris.platform.servicelayer.search.SearchResult
+import de.hybris.platform.util.Config
 
 FlexibleSearchQuery flexibleSearchQuery=null;
 

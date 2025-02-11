@@ -1,22 +1,12 @@
-import de.hybris.platform.commercefacades.storelocator.data.PointOfServiceData
-import de.hybris.platform.commerceservices.storefinder.data.PointOfServiceDistanceData
-import de.hybris.platform.core.enums.OrderStatus
-import de.hybris.platform.core.model.order.OrderModel
+import de.hybris.platform.azure.dtu.DatabaseUtilization
 import de.hybris.platform.cronjob.enums.CronJobResult
 import de.hybris.platform.cronjob.enums.CronJobStatus
 import de.hybris.platform.cronjob.model.CronJobModel
-import de.hybris.platform.servicelayer.cronjob.PerformResult
-import org.apache.commons.collections.CollectionUtils
 import org.apache.commons.lang.time.DateUtils
 import org.slf4j.LoggerFactory
-import de.hybris.platform.servicelayer.search.FlexibleSearchQuery
-import de.hybris.platform.azure.dtu.DatabaseUtilization
 
 import java.time.Duration
 import java.time.Instant
-import java.time.temporal.TemporalUnit
-import java.util.stream.Collectors;
-
 
 /**
  * Note: this groovy is available only with the Azure DTU extension on SAP Commerce Cloud.

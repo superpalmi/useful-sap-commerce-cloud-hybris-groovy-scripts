@@ -5,7 +5,6 @@
  *
  *
  */
-import java.util.*;
 flexibleSearch = spring.getBean("flexibleSearchService")
 result = flexibleSearch.search (/select {pk} from {ComposedType}/).getResult()
 Tree tree = new Tree();
